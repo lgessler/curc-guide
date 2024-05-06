@@ -12,11 +12,11 @@ tokenizer = AutoTokenizer.from_pretrained("bert-base-cased")
 def tokenize_function(examples):
     return tokenizer(examples["text"], padding="max_length", truncation=True)
 
-tokenized_datasets = dataset.map(tokenize_function, batched=True)
+tokenized_datasets = dataset.map(tokenize_function, batched=True, num_proc=4)
 small_train_dataset = tokenized_datasets["train"].shuffle(seed=42).select(range(1000))
 small_eval_dataset = tokenized_datasets["test"].shuffle(seed=42).select(range(1000))
 
-model = AutoModelForSequenceClassification.from_pretrained("roberta_base", num_labels=5)
+model = AutoModelForSequenceClassification.from_pretrained("roberta-base", num_labels=5)
 
 training_args = TrainingArguments(output_dir="test_trainer", evaluation_strategy="epoch")
 metric = evaluate.load("accuracy")
