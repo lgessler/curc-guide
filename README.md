@@ -60,7 +60,7 @@ ssh xxxxdddd@login.rc.colorado.edu
 acompile
 ```
 
-For convenience, I recommend creating a symlink between your `/home` and `/projects` directory, though this is not necessary:
+For convenience, I recommend creating a symlink between your `/home` and `/projects` directory so that `cd ~/projects` will take you to `/home/$USER/projects`, though this is not necessary:
 
 ```bash
 ln -s /projects/$USER /home/$USER/projects
