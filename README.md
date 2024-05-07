@@ -98,7 +98,7 @@ Now, let's make a new Python environment and add some dependencies:
 ```bash
 conda create --name hf python=3.10
 conda activate hf
-pip install "transformers[torch]" datasets evaluate
+pip install "transformers[torch]" datasets evaluate numpy scikit-learn
 ```
 
 Let's put our code (a simplified version of [this tutorial code from HuggingFace](https://huggingface.co/docs/transformers/en/training)) under the projects folder:
@@ -141,8 +141,8 @@ module purge
 module add anaconda
 
 cd hf_demo
-source activate hf
-python main.py
+# Using `conda activate` inside scripts can be annoying--just use the absolute path to the `python` bin instead
+/projects/$USER/software/anaconda/envs/hf/bin/python main.py
 ```
 
 This is a script for submitting a [batch job](https://curc.readthedocs.io/en/latest/running-jobs/batch-jobs.html).
