@@ -34,7 +34,7 @@ Alpine has four [node types](https://curc.readthedocs.io/en/latest/compute/node-
 
 1. Login nodes: this is where you are after `ssh`ing into `login.rc.colorado.edu`. They are not used for any heavy computation.
 2. Compile nodes: these were originally intended for compiling code for languages where that is an expensive operation, like C++ or Fortran. That doesn't apply to us, but for this historical reason, you still need to access a compile node in order to do things like e.g. set up new Anaconda environments.
-3. Compute nodes: these are the ones with the GPUs that run your jobs. 
+3. Compute nodes: these are the ones with the GPUs that run your jobs. While you can connect to them directly, you will primarily be sending jobs to them instead.
 4. Data transfer nodes: don't worry about these--we'll use some other means to move files around.
 
 ### Software
