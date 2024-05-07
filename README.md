@@ -152,7 +152,7 @@ Briefly:
 * `account`: all jobs are associated with an account (or an "allocation") which tracks the number of **service units** (SUs) that have been used for a particular project. Service units are "device-hours" which you can spend on CPUs and GPUs. Speaking loosely, the more SUs you use, the *lower priority* your jobs will be, meaning some others will be able to queue jobs before you during times of high demand. By default, you will use the `ucb-general` allocation.
 * `nodes`: this is the number of devices needed to run the job. You will always have this set to 1.
 * `ntasks`: this is the number of CPU cores assigned to your job, and this will also determine the amount of CPU RAM your job will have. Consider decreasing if your job won't need much CPU contribution.
-* `time`: the maximum amount of time your job will run for. Your job will be killed after this time is exceeeded. The maximum time that can be standardly assigned is 24h.
+* `time`: the maximum amount of time your job will run for. Your job will be killed after this time is exceeded. The maximum time that can be standardly assigned is 24h.
 * `partition`: the [subcluster of Alpine](https://curc.readthedocs.io/en/latest/clusters/alpine/alpine-hardware.html) that will process your job. For GPU jobs, you will always keep this on `aa100`.
 * `gres`: this is used to specify the number of GPUs you need. You will always keep this at one.
 * `job-name`: a meaningful human-readable name for your job. Name it after the project you're running the job for.
