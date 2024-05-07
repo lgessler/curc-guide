@@ -1,4 +1,3 @@
-from tqdm.auto import tqdm
 import numpy as np
 import evaluate
 import torch
