@@ -43,7 +43,7 @@ Software that requires non-trivial installation on the system is managed using [
 By default, almost no packages will be made available to you--instead, you will dynamically load them a la carte using the `module` command.
 For example, `module load anaconda` can be used to load Anaconda and gain access to the `conda` command.
 
-Note that on Alpine, you must 
+Note that on Alpine, you must connect to a compile node via `acompile` before most modules will be available to you.
 
 # 3. Tutorial: Fine-tuning RoBERTa
 
